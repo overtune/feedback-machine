@@ -17,7 +17,7 @@ const Feedback: React.FC = () => {
 	});
 
 	return (
-		<div>
+		<div className="transform scale-150">
 			<div className="flex items-center space-x-2">
 				{current.matches('success.successPositive') && (
 					<CgSmileMouthOpen className="text-3xl text-gray-700" />
