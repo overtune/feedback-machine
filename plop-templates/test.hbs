@@ -1,0 +1,17 @@
+/**
+ * {{properCase name}} - test
+ */
+
+import React from 'react';
+import { render } from '@test-utils/test-utils';
+import { axe, toHaveNoViolations } from 'jest-axe';
+import {{properCase name}} from './{{properCase name}}';
+expect.extend(toHaveNoViolations);
+
+describe('{{properCase name}}', () => {
+	it('should not have any accessibility issues', async () => {
+		const { container } = render(<{{properCase name}}>Test</{{properCase name}}>);
+		const results = await axe(container);
+		expect(results).toHaveNoViolations();
+	});
+});

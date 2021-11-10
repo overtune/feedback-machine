@@ -1,0 +1,25 @@
+/**
+ * {{properCase name}} - stories
+ */
+
+import React from 'react';
+import { withKnobs, text } from '@storybook/addon-knobs';
+import {{properCase name}} from './{{properCase name}}';
+
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
+export default {
+	title: '3. Components/{{properCase name}}',
+	component: {{properCase name}},
+	decorators: [withKnobs],
+};
+
+export const Default = () => {
+	const title = text('Title', '{{properCase name}} component');
+
+	return <{{properCase name}} title={title} />;
+};
+Default.story = { parameters: { docs: { disable: true } } };
+
+export const Demo = () => {
+	return <{{properCase name}} title="My title" />;
+};
